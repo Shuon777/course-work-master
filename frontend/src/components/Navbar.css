@@ -1,0 +1,52 @@
+.navbar {
+    background-color: #333;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    /* Дополнительные стили при необходимости */
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.navbar a.active {
+    background-color: #555;
+}
+
+.auth-buttons {
+    margin-left: auto; /* Сдвигает кнопки в правый край */
+}
+
+.auth-button {
+    border: 1px solid #ff6f61;
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 111, 97, 0.5);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    background-color: transparent;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.auth-button:hover {
+    background-color: #ff6f61;
+    color: white;
+}

@@ -1,0 +1,106 @@
+/* StudioList.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f9fc; /* Светлый фон */
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #4a4a4a; /* Темно-серый цвет */
+    margin-bottom: 20px;
+}
+
+.container {
+    max-width: 600px; /* Уменьшаем ширину контейнера */
+    margin: 0 auto;
+    background: #ffffff; /* Белый фон для контейнера */
+    border-radius: 16px; /* Более плавные углы */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+input[type="text"] {
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #d1d1d1; /* Светло-серая граница */
+    border-radius: 8px;
+    width: 10%;
+    transition: border-color 0.3s;
+    font-size: 16px;
+}
+
+input[type="text"]:focus {
+    border-color: #ff6f61; /* Теплый цвет при фокусе */
+    outline: none;
+}
+
+button {
+    padding: 12px;
+    width: 150px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 8px;
+    background-color: #ff6f61; /* Теплый цвет кнопок */
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #ff4f3d; /* Более темный оттенок при наведении */
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+table {
+    width: 50%; /* Устанавливаем авто ширину для таблицы */
+    max-width: 100%; /* Максимальная ширина 100% контейнера */
+    border-collapse: separate; /* Разделяем границы ячеек */
+    border-spacing: 0; /* Убираем промежутки между ячейками */
+    margin: 20px;
+    border: 2px solid #4a4a4a; /* Устанавливаем более темную границу для внешней границы таблицы */
+    border-radius: 10px; /* Более плавные углы для таблицы */
+    overflow: hidden; /* Скрываем углы таблицы */
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #4a4a4a; /* Устанавливаем одинаковую границу для ячеек */
+    
+}
+
+th {
+    background-color: #ff6f61; /* Теплый цвет заголовков */
+    color: white;
+    font-weight: bold;
+}
+
+tr:hover {
+    background-color: #f9f9f9; /* Светлый фон при наведении на строку */
+}
+
+.no-studios {
+    text-align: center;
+    color: #6c757d; /* Серый цвет для текста */
+    font-style: italic;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+}
+

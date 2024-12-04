@@ -1,0 +1,87 @@
+/* src/components/Login.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #f7f9fc, #e3e4e8); /* Градиентный фон */
+    margin: 0;
+    padding: 20px;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center; /* Центрируем форму по горизонтали */
+    align-items: center; /* Центрируем форму по вертикали */
+    height: 100vh; /* Занимаем всю высоту экрана */
+}
+
+.login-form {
+    max-width: 400px; /* Уменьшаем ширину формы */
+    margin: 50px auto; /* Центрируем форму */
+    background: #ffffff; /* Белый фон для формы */
+    border-radius: 16px; /* Более плавные углы */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1); /* Более выраженная тень */
+    padding: 30px; /* Отступы внутри формы */
+    transition: transform 0.3s; /* Плавный переход для анимации */
+}
+
+.login-form:hover {
+    transform: translateY(-5px); /* Подъем формы при наведении */
+}
+
+.login-form h2 {
+    text-align: center; /* Центрируем заголовок */
+    color: #4a4a4a; /* Темно-серый цвет */
+    margin-bottom: 20px; /* Отступ снизу */
+    font-size: 24px; /* Увеличиваем размер шрифта заголовка */
+}
+
+.login-form div {
+    margin-bottom: 15px; /* Отступы между полями */
+}
+
+.login-form label {
+    display: block; /* Блоковое отображение для меток */
+    margin-bottom: 5px; /* Отступ снизу */
+    font-weight: bold; /* Жирный шрифт для меток */
+    color: #333; /* Темный цвет для меток */
+}
+
+.login-form input[type="email"],
+.login-form input[type="password"] {
+    padding: 12px; /* Отступы внутри полей */
+    margin: 10px 0; /* Отступы между полями */
+    border: 1px solid #d1d1d1; /* Светло-серая граница */
+    border-radius: 8px; /* Плавные углы */
+    width: 80%; /* Уменьшаем ширину до 80% */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Плавный переход для границы и тени */
+    font-size: 16px; /* Размер шрифта */
+}
+
+.login-form input[type="email"]:focus,
+.login-form input[type="password"]:focus {
+    border-color: #ff6f61; /* Теплый цвет при фокусе */
+    outline: none; /* Убираем обводку */
+    box-shadow: 0 0 5px rgba(255, 111, 97, 0.5); /* Тень при фокусе */
+}
+
+.login-form button {
+    padding: 12px; /* Отступы внутри кнопки */
+    width: 100%; /* Ширина 100% */
+    margin: 10px 0; /* Отступы между кнопками */
+    border: none; /* Убираем границу */
+    border-radius: 8px; /* Плавные углы */
+    background-color: #ff6f61; /* Теплый цвет кнопок */
+    color: white; /* Цвет текста */
+    font-size: 16px; /* Размер шрифта */
+    cursor: pointer; /* Указатель при наведении */
+    transition: background-color 0.3s, transform 0.2s; /* Плавные переходы */
+}
+
+.login-form button:hover {
+    background-color: #ff4f3d; /* Более темный оттенок при наведении */
+    transform: translateY(-2px); /* Подъем кнопки при наведении */
+}
+
+.login-form button:active {
+    transform: translateY(0); /* Возвращаем кнопку на место при нажатии */
+}
