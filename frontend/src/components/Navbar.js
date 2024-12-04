@@ -24,17 +24,17 @@ const Navbar = ({ user, onLogout }) => {
                                     <NavLink to="/journals" className="nav-link">Журналы</NavLink>
                                 </li>
                                 <li>
-                                    <NavLink to="/document3" className="nav-link">Документ №3</NavLink>
+                                    <NavLink to="/document3" className="nav-link">Документ 3</NavLink>
                                 </li>
                                 <li>
-                                    <NavLink to="/document4" className="nav-link">Документ №4</NavLink>
+                                    <NavLink to="/document4" className="nav-link">Документ 4</NavLink>
                                 </li>
                             </>
                         )}
                         {user.is_admin && (
                             <>
                                 <li>
-                                    <NavLink exact to="/" className="nav-link">
+                                    <NavLink exact to="/studios" className="nav-link">
                                         Студии
                                     </NavLink>
                                 </li>
@@ -75,22 +75,22 @@ const Navbar = ({ user, onLogout }) => {
                                 </li>
                                 <li>
                                     <NavLink to="/document1" className="nav-link">
-                                        Документ №1
+                                        Документ 1
                                     </NavLink>
                                 </li>
                                 <li>
                                     <NavLink to="/document2" className="nav-link">
-                                        Документ №2
+                                        Документ 2
                                     </NavLink>
                                 </li>
                                 <li>
                                     <NavLink to="/document3" className="nav-link">
-                                        Документ №3
+                                        Документ 3
                                     </NavLink>
                                 </li>
                                 <li>
                                     <NavLink to="/document4" className="nav-link">
-                                        Документ №4
+                                        Документ 4
                                     </NavLink>
                                 </li>
                             </>
@@ -99,10 +99,10 @@ const Navbar = ({ user, onLogout }) => {
                 ) : (
                     <>
                         <li>
-                            <NavLink to="/document1" className="nav-link">Документ №1</NavLink>
+                            <NavLink to="/document1" className="nav-link">Документ 1</NavLink>
                         </li>
                         <li>
-                            <NavLink to="/document2" className="nav-link">Документ №2</NavLink>
+                            <NavLink to="/document2" className="nav-link">Документ 2</NavLink>
                         </li>
                     </>
                 )}
@@ -111,7 +111,14 @@ const Navbar = ({ user, onLogout }) => {
                 {user ? (
                     <button onClick={handleLogout} className="nav-link auth-button">Выйти</button>
                 ) : (
-                    <NavLink to="/login" className="nav-link auth-button">Войти</NavLink>
+                <>
+                    <li>
+                        <NavLink to="/login" className="nav-link auth-button">Войти</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/register" className="nav-link auth-button">Зарегистрироваться</NavLink>
+                    </li>
+                   </>
                 )}
             </div>
         </nav>

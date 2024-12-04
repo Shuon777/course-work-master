@@ -261,8 +261,8 @@ class ModeratorRead(BaseModel):
 class ModeratorCreate(BaseModel): 
     moderator_name: str = Field(..., min_length=1, max_length=25) 
     moderator_email: EmailStr 
-    password: str = Field(..., min_length=8, max_length=255) 
-    is_user: bool = False
+    password: str = Field(..., min_length=6, max_length=255)
+    is_user: bool = True
     is_cashier: bool = False
     is_admin: bool = False
 

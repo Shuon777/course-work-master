@@ -1,4 +1,4 @@
-/* src/components/Login.css */
+/* src/components/Register.css */
 
 body {
     font-family: 'Arial', sans-serif;
@@ -46,8 +46,9 @@ body {
     color: #333; /* Темный цвет для меток */
 }
 
-.login-form input[type="email"],
-.login-form input[type="password"] {
+.login-form input[type="moderator_email"],
+.login-form input[type="password"],
+.login-form input[type="moderator_name"] {
     padding: 12px; /* Отступы внутри полей */
     margin: 10px 0; /* Отступы между полями */
     border: 1px solid #d1d1d1; /* Светло-серая граница */
@@ -57,8 +58,9 @@ body {
     font-size: 16px; /* Размер шрифта */
 }
 
-.login-form input[type="email"]:focus,
-.login-form input[type="password"]:focus{
+.login-form input[type="moderator_email"]:focus,
+.login-form input[type="password"]:focus,
+.login-form input[type="moderator_name"]:focus {
     border-color: #ff6f61; /* Теплый цвет при фокусе */
     outline: none; /* Убираем обводку */
     box-shadow: 0 0 5px rgba(255, 111, 97, 0.5); /* Тень при фокусе */

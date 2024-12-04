@@ -537,6 +537,8 @@ class Login(BaseModel):
     email: str
     password: str
 
+
+
 @app.post("/login")
 def login(login: Login):
     db: Session = SessionLocal()

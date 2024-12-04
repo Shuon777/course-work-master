@@ -2,6 +2,7 @@ import React, { Suspense, lazy, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Login from './components/Login';
+import Register from './components/Register';
 import './App.css';
 
 const StudioList = lazy(() => import('./components/StudioList'));
@@ -16,6 +17,7 @@ const RentalList = lazy(() => import('./components/RentalList'));
 const RentalDebtorsList = lazy(() => import('./components/RentalDebtorsList'));
 const FilmsGroupedByGenreList = lazy(() => import('./components/FilmsGroupedByGenreList'));
 const FilmsByProducerList = lazy(() => import('./components/FilmsByProducerList'));
+const Home = lazy(() => import('./components/Home'));
 
 const NotFound = () => (
     <div style={{ textAlign: 'center', padding: '50px' }}>
@@ -31,6 +33,10 @@ function App() {
         setUser(userData);
     };
 
+    const handleRegister = (userData) => {
+        setUser(userData);
+    };
+
     const handleLogout = () => {
         setUser(null);
     };
@@ -42,7 +48,8 @@ function App() {
                 <div className="content">
                     <Suspense fallback={<div>Загрузка...</div>}>
                         <Routes>
-                            <Route exact path="/" element={<StudioList />} />
+                            <Route exact path="/" element={<Home />} />
+                            <Route path="/studios" element={<StudioList />} />
                             <Route path="/genres" element={<GenreList />} />
                             <Route path="/actors" element={<ActorList />} />
                             <Route path="/clients" element={<ClientList />} />
@@ -55,6 +62,7 @@ function App() {
                             <Route path="/document3" element={<RentalList />} />
                             <Route path="/document4" element={<RentalDebtorsList />} />
                             <Route path="/login" element={<Login onLogin={handleLogin} />} />
+                            <Route path="/register" element={<Register onRegister={handleRegister} />} />
                             <Route path="*" element={<NotFound />} />
                         </Routes>
                     </Suspense>
